@@ -1,0 +1,6 @@
+{
+  "name": "vicky.AI — Autonomous Video Producer",
+  "description": "Intelligent personal AI producer that autonomously transforms ideas into real, cinematic, and 3D videos with shot breakdowns, character bibles, color palettes, and multi-tool connectors for Canva, CapCut, Higgsfield, and DaVinci.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
