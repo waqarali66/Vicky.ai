@@ -5,9 +5,9 @@ import { generateRunwayClip } from "../services/runwayVideo";
 interface Props { isOpen: boolean; onClose: () => void; defaultPrompt?: string; aspectRatio?: string; }
 
 export const RunwayVideoModal: React.FC<Props> = ({ isOpen, onClose, defaultPrompt = "", aspectRatio = "16:9" }) => {
-  const [prompt, setPrompt] = useState(defaultPrompt);
+  const [prompt, setPrompt] = useState(defaultPrompt.slice(0, 1000));
   const [ratio, setRatio] = useState(aspectRatio === "9:16" ? "9:16" : "16:9");
-  const [duration, setDuration] = useState<5 | 10>(10);
+  const [duration, setDuration] = useState<5 | 10>(5);
   const [busy, setBusy] = useState(false);
   const [status, setStatus] = useState("");
   const [error, setError] = useState("");
