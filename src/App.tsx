@@ -22,6 +22,7 @@ import { TransactionUploadModal } from './components/TransactionUploadModal';
 import { AuthModal } from './components/AuthModal';
 import { CharacterUploadModal } from './components/CharacterUploadModal';
 import { RenderVideoModal } from './components/RenderVideoModal';
+import { RunwayVideoModal } from './components/RunwayVideoModal';
 import { AiStudioLab } from './components/AiStudioLab';
 import {
   VideoTutorialOverlay,
@@ -54,6 +55,7 @@ export default function App() {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState<boolean>(false);
   const [isCharacterModalOpen, setIsCharacterModalOpen] = useState<boolean>(false);
   const [isRenderModalOpen, setIsRenderModalOpen] = useState<boolean>(false);
+  const [isRunwayModalOpen, setIsRunwayModalOpen] = useState<boolean>(false);
   const [selectedCharacterForEdit, setSelectedCharacterForEdit] = useState<CharacterProfile | null>(null);
   const [isProducing, setIsProducing] = useState<boolean>(false);
   const [isExporting, setIsExporting] = useState<boolean>(false);
@@ -626,6 +628,22 @@ export default function App() {
         }}
         onOpenSubscription={() => setIsSubscriptionModalOpen(true)}
       />
+
+      <RunwayVideoModal
+        isOpen={isRunwayModalOpen}
+        onClose={() => setIsRunwayModalOpen(false)}
+        defaultPrompt={currentProject?.shots?.[activeShotIndex]?.visualPrompt || currentProject?.userIdea || ""}
+        aspectRatio={currentProject?.aspectRatio || "16:9"}
+      />
+
+      <button
+        type="button"
+        onClick={() => setIsRunwayModalOpen(true)}
+        className="fixed bottom-6 left-6 z-40 inline-flex items-center gap-2 rounded-full border border-amber-300/50 bg-amber-400 px-4 py-3 text-sm font-bold text-slate-950 shadow-xl hover:bg-amber-300"
+      >
+        <Video className="h-4 w-4" />
+        Generate Real AI Video
+      </button>
 
       <RenderVideoModal
         isOpen={isRenderModalOpen}
