@@ -2,7 +2,7 @@ name: Build Vicky.AI
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "feature/runway-video-generation"]
   pull_request:
     branches: ["main"]
 
@@ -18,10 +18,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
-          cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Build Vicky.AI
         run: npm run build
