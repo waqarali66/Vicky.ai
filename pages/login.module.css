@@ -1,0 +1,1 @@
+.page{min-height:100vh;display:grid;grid-template-columns:minmax(420px,520px) 1fr;background:#080d18;color:#edf5ff;font-family:var(--font-family-base)}

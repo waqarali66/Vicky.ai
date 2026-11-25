@@ -1,0 +1,1 @@
+import {type GeneratedAlways, Kysely, CamelCasePlugin} from 'kysely'
