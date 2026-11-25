@@ -1,1 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root {
+  /* Overlay layers */
+  --z-overlay: 400;
+  --z-spotlight: 1000; /* Tutorial spotlights/guided help */
+  /* System layers */
+  --z-critical: 2000; /* Critical system notifications */
+  /* spacing */
+  --spacing-1: 0.25rem; --spacing-2: 0.5rem; --spacing-3: 0.75rem;
+  --spacing-4: 1rem; --spacing-6: 1.5rem; --spacing-8: 2rem;
+  --spacing-12: 3rem; --spacing-16: 4rem; --spacing-20: 5rem;
+}
+:root {
+  color-scheme: dark;
+  --background:#080d18; --foreground:#edf5ff;
+  --surface:#0e1626; --surface-foreground:#edf5ff;
+  --sidebar:#0a1120; --sidebar-foreground:#e5efff;
+  --card:#111c30; --card-foreground:#edf5ff;
+  --popup:#17243a; --popup-foreground:#edf5ff;
+  --primary:#54d9e8; --primary-foreground:#06131c;
+  --secondary:#18243a; --secondary-foreground:#dbe8ff;
+  --accent:#20274a; --accent-foreground:#b9c6ff;
+  --muted:#172237; --muted-foreground:#91a2bd;
+  --success:#54d6ae; --success-foreground:#061b17;
+  --error:#ff7185; --error-foreground:#240a12;
+  --warning:#f4bd68; --warning-foreground:#211506;
+  --info:#7f9cff; --info-foreground:#0b1530; --info-hover:#9aafff; --info-active:#6684ed;
+  --border:#263650;
+  --font-family-base:'DM Sans',sans-serif; --font-family-display:'Space Grotesk',sans-serif;
+  --font-family-monospace:ui-monospace,SFMono-Regular,Menlo,monospace; --font-family-cursive:cursive;
+  --shadow:0 8px 24px rgba(0,0,0,.22); --shadow-md:0 14px 38px rgba(0,0,0,.3); --shadow-lg:0 24px 70px rgba(0,0,0,.42); --shadow-focus:0 0 0 3px rgba(84,217,232,.2);
+  --radius-sm:8px; --radius:12px; --radius-md:16px; --radius-lg:22px; --radius-full:9999px;
+  --animation-duration-fast:140ms; --animation-duration-normal:220ms; --animation-duration-slow:360ms;
+  --chart-color-1:#54d9e8; --chart-color-2:#8c83ff; --chart-color-3:#54d6ae; --chart-color-4:#f4bd68; --chart-color-5:#ff7185;
+}
+.dark {}
